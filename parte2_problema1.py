@@ -20,10 +20,12 @@ for prob in p:
 
 # gráfica
 plt.figure(figsize=(6,5))
-plt.bar(p, norm_size, label="Componente gigante")
+plt.plot(p, norm_size)
 plt.axvline(x=1/n, color='red', linestyle='--', label=f"Umbral teórico (1/n = {1/n:.4f})")
 plt.xlabel("Probabilidad (p)")
 plt.ylabel("Tamaño normalizado del componente gigante")
-plt.title("Crecimiento del componente gigante vs Probabilidad de conexión")
+plt.title("Crecimiento del componente gigante vs Probabilidad de conexión\n" + 
+          f"Red de Erdős-Rényi (n={n} nodos)", fontsize=14, fontweight='bold')
+plt.legend(loc='best', fontsize=10)
 plt.legend()
 plt.show()
